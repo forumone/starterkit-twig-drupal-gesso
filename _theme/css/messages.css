@@ -1,0 +1,53 @@
+/* generated with grunt-sass-globbing */
+/* generated with grunt-sass-globbing */
+/* generated with grunt-sass-globbing */
+.messages {
+  background-color: #f1f1f1;
+  background-position: 0.5882352941em 0.5882352941em;
+  background-repeat: no-repeat;
+  background-size: 2.3529411765em;
+  color: #212121;
+  margin-bottom: 1rem;
+  padding: 1em;
+  position: relative;
+  word-wrap: break-word; }
+  [dir='rtl'] .messages {
+    background-position: right 0.5882352941em top 0.5882352941em; }
+  @media (min-width: 37.5em) {
+    .messages {
+      background-size: 3.0588235294em; } }
+  @media print {
+    .messages {
+      background-image: none !important; } }
+
+.messages__content {
+  display: table-cell;
+  padding-left: 2.9411764706em;
+  vertical-align: top; }
+  [dir='rtl'] .messages__content {
+    padding-left: 0;
+    padding-right: 2.9411764706em; }
+  .messages__content > *:last-child {
+    margin-bottom: 0; }
+
+.messages--error {
+  background-image: url("../images/bg/messages-error.png");
+  background-image: -webkit-linear-gradient(transparent, transparent), url("../images/bg/messages-error.svg");
+  background-image: linear-gradient(transparent, transparent), url("../images/bg/messages-error.svg");
+  background-color: #f9dede; }
+  .messages--error .messages__item em:first-child {
+    font-style: normal;
+    font-weight: bold; }
+
+.messages--status {
+  background-image: url("../images/bg/messages-status.png");
+  background-image: -webkit-linear-gradient(transparent, transparent), url("../images/bg/messages-status.svg");
+  background-image: linear-gradient(transparent, transparent), url("../images/bg/messages-status.svg");
+  background-color: #e7f4e4; }
+
+.messages--warning {
+  background-image: url("../images/bg/messages-warning.png");
+  background-image: -webkit-linear-gradient(transparent, transparent), url("../images/bg/messages-warning.svg");
+  background-image: linear-gradient(transparent, transparent), url("../images/bg/messages-warning.svg");
+  background-color: #fff1d2; }
+/*# sourceMappingURL=messages.css.map */
