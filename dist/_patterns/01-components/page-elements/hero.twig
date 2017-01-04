@@ -1,0 +1,10 @@
+<div class="hero" style="background-image: url({{ hero.image|default("http://lorempixel.com/1600/800/nature/") }});">
+  <div class="hero__content">
+    <h1 class="hero__title">{{ hero.title|default("Hero Title") }}</h1>
+    <h2 class="hero__subtitle">{{ hero.subtitle|default("Hero Subtitle") }}</h2>
+    <div class="hero__text">{{ hero.summary|default("<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>")|raw }}</div>
+    <div class="hero__call-to-action">
+      <a href="#" class="button">{{ hero.buttontext|default("Hero Button") }}</a>
+    </div>
+  </div>
+</div>
