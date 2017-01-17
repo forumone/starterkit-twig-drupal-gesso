@@ -1,5 +1,7 @@
-<article class="node node--type-article node--display-mode-teaser" role="article">
+<article class="node node--type-page node--display-mode-teaser" role="article">
   <h2 class="node__title"><a href="{{ url }}">{{ title }}</a></h2>
   <div class="node__date">{% include "base-medium-date" %}</div>
-  {{ summary | raw }}
+  <div class="node__summary">
+    {{ summary | raw }}
+  </div>
 </article>
