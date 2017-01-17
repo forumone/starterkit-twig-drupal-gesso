@@ -1,0 +1,16 @@
+<article class="node node--type-article node--display-mode-full" role="article">
+  {% include "components-page-title" %}
+  <header>
+    <div class="node__date">{% include "base-long-datetime" %}</div>
+    <div class="node__author">
+      <span itemprop="author" itemtype="http://schema.org/Person">by
+        <a itemprop="url" rel="author" href="{{ url }}">
+          <span itemprop="name">{{ author }}</span>
+        </a>
+      </span>
+    </div>
+  </header>
+  <div class="node__content">
+    {{ body | raw }}
+  </div>
+</article>

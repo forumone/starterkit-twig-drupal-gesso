@@ -17,6 +17,7 @@
   "summary": "<p>This is the summary, which can contain <abbr title='Hyper Text Markup Language'>HTML</abbr> markup. It should be 600 characters or less.</p>",
   "title": "Title",
   "url": "#",
+  "author": "Author name",
 
   "file": {
     "icon": "../../drupal/images/application-pdf.png",
