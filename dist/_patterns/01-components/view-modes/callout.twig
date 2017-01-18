@@ -1,0 +1,21 @@
+<div class="callout">
+    {% block media %}
+        <div class="callout__rich-media" style="background-image: url({{ hero.image|default(" https://unsplash.it/300/400") }});"></div>
+    {% endblock %}
+
+    <h3 class="callout__header">
+        {{ callout.title|default("Callout Title") }}
+    </h3>
+
+    {% block content %}
+        <div class="callout__content">
+            {{ callout.content|default("<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>")|raw }}
+        </div>
+    {% endblock %}
+
+    {% block callToAction %}
+        <div class="callout__call-to-action">
+            <a href="#" class="button">{{ callout.buttontext|default("Callout Button") }}</a>
+        </div>
+    {% endblock %}
+</div>
