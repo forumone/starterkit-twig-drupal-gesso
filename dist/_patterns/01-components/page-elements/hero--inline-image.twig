@@ -1,4 +1,10 @@
-<div class="hero" style="background-image: url({{ hero.image|default("http://lorempixel.com/1600/800/nature/") }});">
+<div class="hero hero--inline-image">
+  <picture>
+    <source srcset="http://lorempixel.com/1600/800/nature/" media="(min-width: 1024px)" type="image/jpeg">
+    <source srcset="http://lorempixel.com/1200/600/nature/" media="(min-width: 760px)" type="image/jpeg">
+    <source srcset="http://lorempixel.com/800/400/nature/" type="image/jpeg">
+    <img srcset="http://lorempixel.com/1600/800/nature" alt="test">
+  </picture>
   <div class="hero__content">
     <h1 class="hero__title">{{ hero.title|default("Hero Title") }}</h1>
     <h3 class="hero__subtitle">{{ hero.subtitle|default("Hero Subtitle") }}</h3>
