@@ -3,15 +3,18 @@
 {% include "layouts-preface-region" %}
 
 <main id="main" class="main" role="main" tabindex="-1">
-  <div class="region-content layout-constrain">
+  <div class="region-content">
+    <div class="l-constrain">
 
-    {% include "components-page-title" %}
+      {% include "components-page-title" %}
 
-    {% for listItem in listItems.four %} 
-      {% include "components-image-teaser" %}
-    {% endfor %}
+      {% for listItem in listItems.four %}
+        {% include "components-image-teaser" %}
+      {% endfor %}
 
-    {% include "components-pager" %}
+      {% include "components-pager" %}
+
+    </div>
 
   </div>
 </main>
