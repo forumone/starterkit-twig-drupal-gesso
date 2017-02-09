@@ -6,11 +6,19 @@
     <img srcset="http://lorempixel.com/1600/800/nature" alt="test">
   </picture>
   <div class="hero__content">
-    <h1 class="hero__title">{{ hero.title|default("Hero Title") }}</h1>
-    <h3 class="hero__subtitle">{{ hero.subtitle|default("Hero Subtitle") }}</h3>
-    <div class="hero__text">{{ hero.summary|default("<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>")|raw }}</div>
-    <div class="hero__call-to-action">
-      <a href="#" class="button">{{ hero.buttontext|default("Hero Button") }}</a>
-    </div>
+    {% if hero.title != "is-hidden" %}
+      <h1 class="hero__title">{{ hero.title|default("Hero Title") }}</h1>
+    {% endif %}
+    {% if hero.subtitle != "is-hidden" %}
+      <h3 class="hero__subtitle">{{ hero.subtitle|default("Hero Subtitle") }}</h3>
+    {% endif %}
+    {% if hero.summary != "is-hidden" %}
+      <div class="hero__text">{{ hero.summary|default("<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>")|raw }}</div>
+    {% endif %}
+    {% if hero.button != "is-hidden" %}
+      <div class="hero__call-to-action">
+        <a href="#" class="button">{{ hero.button|default("Hero Button") }}</a>
+      </div>
+    {% endif %}
   </div>
 </div>

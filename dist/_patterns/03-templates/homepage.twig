@@ -6,6 +6,15 @@
 	<div class="region-content">
 		<div class="l-constrain">
 
+			{% include "components-hero"
+				with {
+					"hero": {
+						"title": "Homepage Hero Title",
+						"subtitle": "is-hidden"
+					}
+				}
+			%}
+
   		<p>Homepage content goes here&hellip;</p>
 
 		</div>
