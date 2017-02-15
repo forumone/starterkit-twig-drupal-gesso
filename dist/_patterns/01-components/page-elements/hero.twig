@@ -1,18 +1,18 @@
-<div class="hero" style="background-image: url({{ hero.image|default("http://lorempixel.com/1600/800/nature/") }});">
+<div class="hero{% if overlay %} hero--overlay{% endif %}" style="background-image: url({{ image }});">
   <div class="hero__content">
-    {% if hero.title != "is-hidden" %}
-      <h1 class="hero__title">{{ hero.title|default("Hero Title") }}</h1>
+    {% if title %}
+      <h1 class="hero__title">{{ title }}</h1>
     {% endif %}
-    {% if hero.subtitle != "is-hidden" %}
-      <h3 class="hero__subtitle">{{ hero.subtitle|default("Hero Subtitle") }}</h3>
+    {% if subtitle %}
+      <h3 class="hero__subtitle">{{ subtitle }}</h3>
     {% endif %}
-    {% if hero.summary != "is-hidden" %}
-      <div class="hero__text">{{ hero.summary|default("<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>")|raw }}</div>
+    {% if summary %}
+      <div class="hero__text">{{ summary|raw }}</div>
     {% endif %}
-    {% if hero.button != "is-hidden" %} 
-    <div class="hero__call-to-action">
-      <a href="#" class="button">{{ hero.button|default("Hero Button") }}</a>
-    </div>
+    {% if button %}
+      <div class="hero__call-to-action">
+        <a href="#" class="button">{{ button }}</a>
+      </div>
     {% endif %}
   </div>
 </div>
