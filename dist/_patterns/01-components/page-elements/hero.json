@@ -1,6 +1,10 @@
 {
-  "image": "http://lorempixel.com/1600/800/nature/",
-  "overlay": true,
+  "customClass": false,
+  "hasBackgroundImage": true,
+  "hasOverlay": true,
+  "image": {
+    "large": "http://lorempixel.com/1600/800/nature/"
+  },
   "title": "Hero Title",
   "subtitle": "Hero Subtitle",
   "summary": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>",

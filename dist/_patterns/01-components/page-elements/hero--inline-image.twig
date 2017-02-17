@@ -1,10 +1,20 @@
-<div class="hero hero--inline-image">
-  <picture>
-    <source srcset="{{ image.large }}" media="(min-width: 1024px)" type="image/jpeg">
-    <source srcset="{{ image.medium }}" media="(min-width: 760px)" type="image/jpeg">
-    <source srcset="{{ image.small }}" type="image/jpeg">
-    <img srcset="{{ image.large }}" alt="test">
-  </picture>
+{%
+  set classes = [
+    'hero',
+    customClass ? customClass,
+    hasInlineImage ? 'hero--inline-image',
+    hasOverlay ? 'has-overlay',
+  ]
+%}
+<div class="{{ classes|join(' ') }}">
+  {% if hasInlineImage %}
+    <picture class="hero__picture">
+      <source srcset="{{ image.large }}" media="(min-width: 1024px)" type="image/jpeg">
+      <source srcset="{{ image.medium }}" media="(min-width: 760px)" type="image/jpeg">
+      <source srcset="{{ image.small }}" type="image/jpeg">
+      <img srcset="{{ image.large }}" alt="Hero Image Alt Text">
+    </picture>
+  {% endif %}
   <div class="hero__content">
     {% if title %}
       <h1 class="hero__title">{{ title }}</h1>

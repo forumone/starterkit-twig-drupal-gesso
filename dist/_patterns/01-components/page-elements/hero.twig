@@ -1,4 +1,11 @@
-<div class="hero{% if overlay %} hero--overlay{% endif %}" style="background-image: url({{ image }});">
+{%
+  set classes = [
+    'hero',
+    customClass ? customClass,
+    hasOverlay ? 'has-overlay',
+  ]
+%}
+<div class="{{ classes|join(' ') }}"{% if hasBackgroundImage %} style="background-image: url({{ image.large }});"{% endif %}>
   <div class="hero__content">
     {% if title %}
       <h1 class="hero__title">{{ title }}</h1>
