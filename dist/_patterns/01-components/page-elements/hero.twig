@@ -1,11 +1,20 @@
 {%
   set classes = [
     'hero',
-    customClass ? customClass,
-    hasOverlay ? 'has-overlay',
-  ]
+    useInlineImage ? 'hero--inline-image',
+    hasOverlay ? 'hero--overlay',
+  ]|join(' ')|trim
 %}
-<div class="{{ classes|join(' ') }}"{% if hasBackgroundImage %} style="background-image: url({{ image.large }});"{% endif %}>
+
+<div class="{{ classes }}"{% if not useInlineImage %} style="background-image: url({{ image.large }});"{% endif %}>
+  {% if useInlineImage %}
+    <picture class="hero__picture">
+      <source srcset="{{ image.large }}" media="(min-width: 1024px)" type="image/jpeg">
+      <source srcset="{{ image.medium }}" media="(min-width: 760px)" type="image/jpeg">
+      <source srcset="{{ image.small }}" type="image/jpeg">
+      <img srcset="{{ image.large }}" alt="Hero Image Alt Text">
+    </picture>
+  {% endif %}
   <div class="hero__content">
     {% if title %}
       <h1 class="hero__title">{{ title }}</h1>
