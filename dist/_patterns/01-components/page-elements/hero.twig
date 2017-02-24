@@ -1,6 +1,7 @@
 {%
   set classes = [
     'hero',
+    customClass ? customClass,
     useInlineImage ? 'hero--inline-image',
     hasOverlay ? 'hero--overlay',
   ]|join(' ')|trim
