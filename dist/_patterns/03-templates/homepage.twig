@@ -3,12 +3,21 @@
 {% include "layouts-preface-region" %}
 
 <main id="main" class="main" role="main" tabindex="-1">
-	<div class="region-content">
-		<div class="l-constrain">
+  <div class="region-content">
+    <div class="l-constrain">
 
-  		<p>Homepage content goes here&hellip;</p>
+      {% include "components-hero"
+        with {
+          "hero": {
+            "title": "Homepage Hero Title",
+            "subtitle": false
+          }
+        }
+      %}
 
-		</div>
+      <p>Homepage content goes here&hellip;</p>
+
+    </div>
   </div>
 </main>
 
