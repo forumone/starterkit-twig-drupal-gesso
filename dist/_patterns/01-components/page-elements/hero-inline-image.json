@@ -5,7 +5,6 @@
     "medium": "http://lorempixel.com/1200/600/nature/",
     "large": "http://lorempixel.com/1600/800/nature/"
   },
-  "useInlineImage": false,
   "hasOverlay": true,
   "title": "Hero Title",
   "subtitle": "Hero Subtitle",
