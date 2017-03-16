@@ -2,8 +2,14 @@
     {% block header %}
         <div class="card__header">
             <img class="card__avatar" src="{{ card.avatar|default("https://unsplash.it/50/50?image=1074") }}" alt="avatar"/>
-            <h2 class="card__title">{{ card.title|default("Card Title") }}</h2>
-            <h3 class="card__sub-title">{{ card.subTitle|default("Card Sub Title") }}</h3>
+            <h3 class="card__title">
+              <a href="{{ url }}">
+                {{ card.title|default("Card Title") }}
+                <span class="card__sub-title">
+                  {{ card.subTitle|default("Card Sub Title") }}
+                </span>
+              </a>
+            </h3>
         </div>
     {% endblock %}
 
