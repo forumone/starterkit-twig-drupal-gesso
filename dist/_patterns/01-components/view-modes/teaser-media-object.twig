@@ -1,0 +1,32 @@
+<article class="teaser teaser--media-object" role="article">
+    <figure class="teaser__media">
+        <a href="#">{% include "base-thumbnail-image" %}</a>
+    </figure>
+    <div class="teaser__content">
+      {% block header %}
+        <h3 class="teaser__title">
+            <a href="#">{{ article.title|default("Article Title") }}</a>
+        </h3>
+        <div class="teaser__meta">
+            <span itemprop="author" itemtype="http://schema.org/Person">
+                by <a itemprop="url" class="byline teaser__byline" rel="author" href="#">
+                    <span itemprop="name">{{ article.author|default("Article Author") }}</span>
+                </a>
+            </span>
+            <time class="pubdate" datetime="{{ article.timestamp|default(" 2016-12-22T10:00:00-05:00") }}">
+                {{ article.date|default("December 22, 2016")}}
+            </time>
+            <a class="comment-count" href="#">
+                <span>{{ article.commentCount|default("23") }}</span>Comments</a>
+        </div>
+      {% endblock %}
+      {% block content %}
+        <div class="teaser__summary">
+            {{ article.summary|default("<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>") | raw }}
+        </div>
+        <a class="teaser__more-link" href="#">
+            <span>Learn more about {{ article.title|default("Article Title")  }}</span>
+        </a>
+      {% endblock %}
+    </div>
+</article>
