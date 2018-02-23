@@ -4,7 +4,7 @@ The Twig Gesso StarterKit for Drupal is meant to be used in conjunction with the
 
 ## Requirements
 
-In addition to the Gesso theme, The Twig Gesso StarterKit for Drupal requires the following:
+In addition to the [Gesso theme](https://github.com/forumone/gesso), The Twig Gesso StarterKit for Drupal requires the following:
 
 * `pattern-lab/edition-php-drupal-standard`:
 [GitHub](https://github.com/pattern-lab/edition-php-drupal-standard)
