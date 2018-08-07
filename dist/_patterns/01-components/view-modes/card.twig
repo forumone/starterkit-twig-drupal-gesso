@@ -1,0 +1,37 @@
+<div class="card">
+    {% block header %}
+        <div class="card__header">
+            <img class="card__avatar" src="{{ card.avatar|default(" https://unsplash.it/50/50?image=1074") }}" alt="avatar"/>
+            <h3 class="card__title">
+                <a href="{{ url }}">
+                    {{ card.title|default("Card Title") }}
+                    <span class="card__sub-title">
+                        {{ card.subTitle|default("Card Sub Title") }}
+                    </span>
+                </a>
+            </h3>
+        </div>
+    {% endblock %}
+    {% block media %}
+        <div class="card__rich-media">
+            <a href="{{ url }}">{% include "base-landscape-image" %}</a>
+        </div>
+    {% endblock %}
+    {% block content %}
+        <div class="card__body-content">
+            {{ card.summary|default("<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>")|raw }}
+        </div>
+    {% endblock %}
+    {% block footer %}
+        <div class="card__actions">
+            <ul class="card__action-items">
+                <li class="card__action-item">
+                    <a href="#" class="card__action-link">Action 1</a>
+                </li>
+                <li class="card__action-item">
+                    <a href="#" class="card__action-link">Action 2</a>
+                </li>
+            </ul>
+        </div>
+    {% endblock %}
+</div>
